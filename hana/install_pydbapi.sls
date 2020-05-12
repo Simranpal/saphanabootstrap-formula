@@ -19,7 +19,11 @@ hana_install_python_pip:
 hana_extract_pydbapi_client:
   hana.pydbapi_extracted:
     - name: PYDBAPI.TGZ
-    - software_folders: [{{ node.exporter.hana_client_path|default(node.install.software_path)|default(hana.software_path) }}]
+    {% if node.exporter.hana_client_path is defined %}
+    - software_folders: [{{ node.exporter.hana_client_path }}]
+    {% else %}
+    - software_folders: [{{ node.install.software_path|default(hana.software_path) }}]
+    {% endif %}
     - output_dir: {{ pydbapi_output_dir }}
     - hana_version: '20'
     - force: true
