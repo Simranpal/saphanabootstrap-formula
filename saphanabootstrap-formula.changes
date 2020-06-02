@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Jun  1 23:08:24 UTC 2020 - Simranpal Singh <simranpal.singh@suse.com>
+
+- Version 0.5.10
+  * Change colocation weight for col_saphana_ip for Azure provider
+
+-------------------------------------------------------------------
 Tue May 19 23:24:55 UTC 2020 - Simranpal Singh <simranpal.singh@suse.com>
 
 - Add support to extract zip,rar,exe,sar hana media 
